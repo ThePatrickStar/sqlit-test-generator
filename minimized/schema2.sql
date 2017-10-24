@@ -1,0 +1,23 @@
+CREATE TABLE abc(a, b, c);
+DROP TABLE abc;
+CREATE VIEW v1 AS SELECT * FROM sqlite_master;
+DROP VIEW v1;
+CREATE TABLE abc(a, b, c);
+CREATE TRIGGER abc_trig AFTER INSERT ON abc BEGIN
+SELECT 1, 2, 3;
+END;
+DROP TRIGGER abc_trig;
+CREATE TABLE abc(a, b, c);
+CREATE INDEX abc_index ON abc(a);
+DROP INDEX abc_index;
+ATTACH 'test2.db' AS aux;
+DETACH aux;
+DROP TABLE abc;
+SELECT * FROM abc;
+CREATE TABLE abc(a, b, c);
+CREATE VIEW abcview AS SELECT * FROM abc;
+DROP VIEW abcview;
+SELECT * FROM abcview;
+INSERT INTO abc VALUES(1, 2, 3);
+CREATE TABLE t2(a, b, c);
+SELECT * FROM abc;

@@ -1,0 +1,13 @@
+CREATE TABLE t1(t text, b blob);
+DELETE FROM t1;
+INSERT INTO t1(t) VALUES($string);
+SELECT substr(t, 11, 12) FROM t1;
+SELECT substr($qstr, 11, 12);
+DELETE FROM t1;
+INSERT INTO t1(b) VALUES(x'$hex');
+SELECT hex(substr(b, 11, 12)) FROM t1;
+SELECT hex(substr(x'$hex', 11, 12));
+DELETE FROM t1;
+INSERT INTO t1(t) VALUES($string);
+SELECT substr(t, 1dx) FROM t1;
+SELECT substr($qstr, 1dx);

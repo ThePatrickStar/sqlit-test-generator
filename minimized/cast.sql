@@ -1,0 +1,8 @@
+SELECT CAST(CAST(x'39323233333732303336383534373734383030' AS real)
+AS integer);
+CREATE TABLE t1(a);
+INSERT INTO t1 VALUES('abc');
+SELECT a, CAST(a AS integer) FROM t1;
+SELECT CAST(a AS integer), a FROM t1;
+SELECT a, CAST(a AS integer), a FROM t1;
+SELECT CAST(a AS integer), a, CAST(a AS real), a FROM t1;

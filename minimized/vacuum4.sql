@@ -1,0 +1,4 @@
+PRAGMA auto_vacuum=FULL;
+CREATE TABLE t1(;
+CREATE TABLE t2(;
+VACUUM;
